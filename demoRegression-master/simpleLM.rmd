@@ -58,11 +58,16 @@ plot(LENGTH~HEADWTH,data=bears)
 summary.lm(headwidthModel)
 ```
 
+Headwith r^2 is 0.5321 which is not as well as other values. 
+
 ```{r}
 sexModel <- lm(LENGTH~SEX,data=bears)
 plot(LENGTH~SEX,data=bears)
 summary.lm(sexModel)
 ```
+
+Sex r^2 value is 0.08373 which is the lowest score of all.
+
 
 ```{r}
 headlenModel <- lm(LENGTH~HEADLEN,data=bears)
@@ -71,6 +76,8 @@ abline(headlenModel)
 summary.lm(headlenModel)
 ```
 
+Headlength r^2 value is is 0.843 which is the best value. 
+
 ```{r}
 weightModel <- lm(LENGTH~WEIGHT,data=bears)
 plot(LENGTH~WEIGHT,data=bears)
@@ -78,4 +85,6 @@ abline(weightModel)
 summary.lm(weightModel)
 ```
 
-In conclusion, the model LENGTH~HEADLEN is the best indicator comparison 
+Weight r^2 value is 0.743 which is the 2nd best value. 
+
+In conclusion, the model LENGTH~HEADLEN is the best indicator comparison with r^2 is 0.843. Followed by 0.7869 with CHEST, 0.743 with WEiGHT, 0.5321 in HEADWIDTH, 0.5073 in AGE, and lastly SEX with a value of 0.084.
